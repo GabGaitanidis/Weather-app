@@ -17,7 +17,7 @@ async function getData(choice) {
     wind.innerHTML = `Wind kph: ${jsonData.current.wind_kph}`;
     type.innerHTML = `${jsonData.current.condition.text}`;
     country.innerHTML = `Country: ${jsonData.location.country}`;
-    const img = new Image();
+    let img = new Image();
     img.src = jsonData.current.condition.icon;
     city.appendChild(img);
     faBtn.addEventListener("click", () => {
